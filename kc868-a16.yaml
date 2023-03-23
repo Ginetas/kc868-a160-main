@@ -247,14 +247,14 @@ binary_sensor:
 
   - platform: gpio
     name: "input9"
-    on_press:
-    then:
-    – switch.toggle: lamp
     pin:
       pcf8574: pcf8574_hub_in_2
       number: 0
       mode: INPUT
       inverted: false
+      on_press:
+       then:
+       – switch.toggle: lamp
 
   - platform: gpio
     name: "input10"
